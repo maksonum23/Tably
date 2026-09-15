@@ -1,0 +1,6 @@
+{
+  "name": "Tably.",
+  "description": "Restaurant software and business process automation with smart reservations and AI menus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
