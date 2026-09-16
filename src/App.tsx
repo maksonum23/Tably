@@ -9,9 +9,11 @@ import { Hero } from './components/Hero';
 import { Features } from './components/Features';
 import { MenuDemo } from './components/MenuDemo';
 import { TableMaps } from './components/TableMaps';
+import { Atmosphere } from './components/Atmosphere';
 import { CustomWebsites } from './components/CustomWebsites';
 import { Reviews } from './components/Reviews';
 import { ROI } from './components/ROI';
+import { About } from './components/About';
 import { FAQ } from './components/FAQ';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
@@ -34,9 +36,11 @@ export default function App() {
         <Features language={language} />
         <MenuDemo language={language} />
         <TableMaps language={language} />
+        <Atmosphere language={language} />
         <CustomWebsites language={language} />
         <Reviews language={language} />
         <ROI language={language} />
+        <About language={language} />
         <FAQ language={language} />
         <CTA language={language} onContactClick={openContact} />
       </main>

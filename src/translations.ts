@@ -8,8 +8,8 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      title: 'Empower Your Restaurant with Smart Automation',
-      subtitle: 'Next-generation table reservations, custom floor plans, and AI-powered online menus.',
+      title: 'The Revolutionary Reservation System for Your Business',
+      subtitle: 'Custom approach to every client, interactive drag-and-drop table maps, and AI-powered tools.',
       cta: 'Get Started',
       secondaryCta: 'Learn More',
     },
@@ -30,10 +30,14 @@ export const translations = {
       },
     },
     tableMaps: {
-      title: 'Beautiful, Intuitive Table Maps',
-      subtitle: 'Minimalist blue & white layouts customized for your unique space.',
-      cafe: 'Cozy Cafe Layout',
+      title: 'Interactive Maps, Just Like a Game',
+      subtitle: 'Build and manage your floor plan using drag-and-drop. It\'s as easy and fun as playing The Sims.',
+      cafe: 'Interactive Floor Planner',
       restaurant: 'Fine Dining Layout',
+    },
+    atmosphere: {
+      title: 'Unforgettable Customer Experience',
+      subtitle: 'Let them feel the unique atmosphere of your establishment right from the reservation stage.',
     },
     menuDemo: {
       title: 'Change Your Menu in Seconds',
@@ -74,6 +78,11 @@ export const translations = {
         }
       ]
     },
+    aboutUs: {
+      badge: 'Made in CZ',
+      title: 'Local Czech Startup, World-Class Tech',
+      description: 'We are a proud Czech startup founded in 2026. We know the specifics of the local market, we know what troubles Czech pub owners and cafe operators, and that\'s why we build a tool that realistically saves you time and money. No impersonal corporate hotlines - we are here for you, with support in Czech and a product developed right here at home.',
+    },
     faq: {
       title: 'Frequently Asked Questions',
       items: [
@@ -104,8 +113,8 @@ export const translations = {
       contact: 'Kontakt',
     },
     hero: {
-      title: 'Posuňte svou restauraci dál s chytrou automatizací',
-      subtitle: 'Nová éra rezervací. Inteligentní plány stolů a online menu s umělou inteligencí, které roste s vaším podnikem.',
+      title: 'Revoluční rezervační systém pro váš byznys',
+      subtitle: 'S osobním přístupem ke každému klientovi, interaktivní mapou stolů s drag & drop a nástroji s umělou inteligencí.',
       cta: 'Začít',
       secondaryCta: 'Zjistit více',
     },
@@ -126,10 +135,14 @@ export const translations = {
       },
     },
     tableMaps: {
-      title: 'Krásné a intuitivní mapy stolů',
-      subtitle: 'Minimalistické modro-bílé rozložení přizpůsobené vašemu prostoru.',
-      cafe: 'Uspořádání kavárny',
+      title: 'Interaktivní mapa jako ze hry',
+      subtitle: 'Postavte si svůj sál pomocí drag & drop. Měňte rozložení stolů v reálném čase, přesně jako ve hře The Sims.',
+      cafe: 'Interaktivní plánovač',
       restaurant: 'Uspořádání restaurace',
+    },
+    atmosphere: {
+      title: 'Nezapomenutelná zákaznická zkušenost',
+      subtitle: 'Dejte hostům pocítit jedinečnou atmosféru vašeho podniku už ve fázi rezervace.',
     },
     menuDemo: {
       title: 'Měňte své menu během vteřin',
@@ -169,6 +182,11 @@ export const translations = {
           desc: 'Náš chytrý CRM systém automaticky sbírá data o hostech a posílá jim cílené nabídky (např. k narozeninám), aby se vrátili.'
         }
       ]
+    },
+    aboutUs: {
+      badge: 'Vyrobeno v ČR',
+      title: 'Lokální český startup, světové technologie',
+      description: 'Jsme hrdý český startup založený v roce 2026. Známe specifika lokálního trhu, víme, co trápí české hospodské a kavárníky, a proto tvoříme nástroj, který vám reálně ušetří čas i peníze. Žádné neosobní korporátní linky – jsme tu pro vás, s podporou v češtině a s produktem vyvinutým u nás doma.',
     },
     faq: {
       title: 'Často kladené dotazy',

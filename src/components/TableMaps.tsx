@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Language, translations } from '../translations';
 import { motion } from 'motion/react';
 
@@ -8,6 +8,9 @@ interface TableMapsProps {
 
 export function TableMaps({ language }: TableMapsProps) {
   const t = translations[language].tableMaps;
+  
+  const cafeRef = useRef<HTMLDivElement>(null);
+  const restaurantRef = useRef<HTMLDivElement>(null);
   
   const windowText = language === 'cs' ? 'OKNA' : 'WINDOWS';
   const entranceText = language === 'cs' ? 'VSTUP' : 'ENTRANCE';
@@ -31,7 +34,7 @@ export function TableMaps({ language }: TableMapsProps) {
             className="flex flex-col items-center w-full"
           >
             <h3 className="text-xl font-semibold text-slate-800 mb-6">{t.cafe}</h3>
-            <div className="w-full aspect-[4/3] bg-slate-50/50 rounded-3xl border border-slate-200 relative shadow-inner overflow-hidden">
+            <div ref={cafeRef} className="w-full aspect-[4/3] bg-slate-50/50 rounded-3xl border border-slate-200 relative shadow-inner overflow-hidden">
               
               {/* Windows - Top */}
               <div className="absolute top-0 left-[15%] right-[15%] h-8 bg-sky-100/60 border-b border-sky-200 rounded-b-2xl flex items-center justify-center">
@@ -39,33 +42,33 @@ export function TableMaps({ language }: TableMapsProps) {
               </div>
 
               {/* Entrance - Bottom Left */}
-              <div className="absolute bottom-0 left-[15%] w-24 h-6 border-t-2 border-dashed border-slate-300 flex items-center justify-center">
+              <div className="absolute bottom-0 left-[15%] w-24 h-6 border-t-2 border-dashed border-slate-300 flex items-center justify-center pointer-events-none">
                 <span className="text-[9px] font-bold text-slate-400 tracking-wider uppercase">{entranceText}</span>
               </div>
 
               {/* Bar - Bottom Right */}
-              <div className="absolute bottom-6 right-6 w-[35%] h-16 rounded-2xl border border-sky-200 bg-sky-50 flex items-center justify-center text-sky-800 font-semibold text-sm shadow-sm">
+              <motion.div drag dragConstraints={cafeRef} whileDrag={{ scale: 1.05 }} className="absolute bottom-6 right-6 w-[35%] h-16 rounded-2xl border border-sky-200 bg-sky-50 flex items-center justify-center text-sky-800 font-semibold text-sm shadow-sm cursor-grab active:cursor-grabbing z-10">
                 {barText}
-              </div>
+              </motion.div>
 
               {/* Tables - Row 1 (Near Window) */}
               <div className="absolute top-[22%] left-0 right-0 flex justify-center gap-3 sm:gap-6 px-4">
                 {[1, 2, 3, 4, 5].map(num => (
-                  <div key={`c1-${num}`} className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-pointer">{num}</div>
+                  <motion.div drag dragConstraints={cafeRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.2 }} key={`c1-${num}`} className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-grab active:cursor-grabbing z-10">{num}</motion.div>
                 ))}
               </div>
 
               {/* Tables - Row 2 */}
               <div className="absolute top-[48%] left-0 right-0 flex justify-center gap-3 sm:gap-6 px-4">
                 {[6, 7, 8, 9, 10].map(num => (
-                  <div key={`c2-${num}`} className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-pointer">{num}</div>
+                  <motion.div drag dragConstraints={cafeRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.2 }} key={`c2-${num}`} className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-grab active:cursor-grabbing z-10">{num}</motion.div>
                 ))}
               </div>
 
               {/* Tables - Row 3 (Left side) */}
               <div className="absolute bottom-8 left-[8%] flex gap-4 sm:gap-6">
                  {[11, 12, 13].map(num => (
-                  <div key={`c3-${num}`} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-pointer">{num}</div>
+                  <motion.div drag dragConstraints={cafeRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.2 }} key={`c3-${num}`} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-grab active:cursor-grabbing z-10">{num}</motion.div>
                 ))}
               </div>
             </div>
@@ -80,7 +83,7 @@ export function TableMaps({ language }: TableMapsProps) {
             className="flex flex-col items-center w-full"
           >
             <h3 className="text-xl font-semibold text-slate-800 mb-6">{t.restaurant}</h3>
-            <div className="w-full aspect-[4/3] bg-slate-50/50 rounded-3xl border border-slate-200 relative shadow-inner overflow-hidden">
+            <div ref={restaurantRef} className="w-full aspect-[4/3] bg-slate-50/50 rounded-3xl border border-slate-200 relative shadow-inner overflow-hidden">
               
               {/* Windows - Right side */}
               <div className="absolute top-[15%] bottom-[15%] right-0 w-8 bg-sky-100/60 border-l border-sky-200 rounded-l-2xl flex items-center justify-center">
@@ -88,42 +91,44 @@ export function TableMaps({ language }: TableMapsProps) {
               </div>
 
               {/* Entrance - Bottom Center */}
-              <div className="absolute bottom-0 left-[40%] right-[40%] h-6 border-t-2 border-dashed border-slate-300 flex items-center justify-center">
+              <div className="absolute bottom-0 left-[40%] right-[40%] h-6 border-t-2 border-dashed border-slate-300 flex items-center justify-center pointer-events-none">
                 <span className="text-[9px] font-bold text-slate-400 tracking-wider uppercase">{entranceText}</span>
               </div>
 
               {/* Booths - Left side */}
               <div className="absolute top-4 bottom-4 left-0 flex flex-col justify-between py-2">
                 {[14, 15, 16, 17, 18].map(num => (
-                  <div key={`r1-${num}`} className="w-12 h-10 sm:w-14 sm:h-12 rounded-r-xl border-y border-r border-sky-400 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-pointer">{num}</div>
+                  <motion.div drag dragConstraints={restaurantRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.1 }} key={`r1-${num}`} className="w-12 h-10 sm:w-14 sm:h-12 rounded-r-xl border-y border-r border-sky-400 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-grab active:cursor-grabbing z-10">{num}</motion.div>
                 ))}
               </div>
 
               {/* Middle tables - Column 1 */}
               <div className="absolute top-[12%] bottom-[12%] left-[25%] flex flex-col justify-between">
                 {[19, 20, 21, 22].map(num => (
-                  <div key={`r2-${num}`} className="w-14 h-8 sm:w-16 sm:h-10 rounded-lg border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-pointer">{num}</div>
+                  <motion.div drag dragConstraints={restaurantRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.2 }} key={`r2-${num}`} className="w-14 h-8 sm:w-16 sm:h-10 rounded-lg border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-grab active:cursor-grabbing z-10">{num}</motion.div>
                 ))}
               </div>
 
               {/* Middle tables - Column 2 */}
               <div className="absolute top-[12%] bottom-[12%] left-[52%] flex flex-col justify-between">
                 {[23, 24, 25, 26].map(num => (
-                  <div key={`r3-${num}`} className="w-14 h-8 sm:w-16 sm:h-10 rounded-lg border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-pointer">{num}</div>
+                  <motion.div drag dragConstraints={restaurantRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.2 }} key={`r3-${num}`} className="w-14 h-8 sm:w-16 sm:h-10 rounded-lg border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-grab active:cursor-grabbing z-10">{num}</motion.div>
                 ))}
               </div>
 
               {/* VIP Round tables - Near window */}
               <div className="absolute top-[18%] right-[14%]">
-                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-sky-400 bg-sky-50 shadow-sm flex items-center justify-center text-sky-800 font-bold text-xs hover:bg-sky-100 transition-colors cursor-pointer">VIP 1</div>
+                 <motion.div drag dragConstraints={restaurantRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.1 }} className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-sky-400 bg-sky-50 shadow-sm flex items-center justify-center text-sky-800 font-bold text-xs hover:bg-sky-100 transition-colors cursor-grab active:cursor-grabbing z-10">VIP 1</motion.div>
               </div>
               <div className="absolute bottom-[18%] right-[14%]">
-                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-sky-400 bg-sky-50 shadow-sm flex items-center justify-center text-sky-800 font-bold text-xs hover:bg-sky-100 transition-colors cursor-pointer">VIP 2</div>
+                 <motion.div drag dragConstraints={restaurantRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.1 }} className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-sky-400 bg-sky-50 shadow-sm flex items-center justify-center text-sky-800 font-bold text-xs hover:bg-sky-100 transition-colors cursor-grab active:cursor-grabbing z-10">VIP 2</motion.div>
               </div>
               
               {/* Extra Bar Table - Top center */}
-              <div className="absolute top-[6%] left-[45%] w-10 h-10 rounded-full border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-pointer">
-                27
+              <div className="absolute top-[6%] left-[45%]">
+                <motion.div drag dragConstraints={restaurantRef} dragMomentum={false} whileHover={{ scale: 1.1 }} whileDrag={{ scale: 1.2 }} className="w-10 h-10 rounded-full border border-sky-300 bg-white shadow-sm flex items-center justify-center text-sky-700 font-bold text-xs hover:bg-sky-50 transition-colors cursor-grab active:cursor-grabbing z-10">
+                  27
+                </motion.div>
               </div>
             </div>
           </motion.div>
