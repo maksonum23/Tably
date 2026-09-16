@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
-import { MenuDemo } from './components/MenuDemo';
 import { TableMaps } from './components/TableMaps';
 import { Atmosphere } from './components/Atmosphere';
 import { CustomWebsites } from './components/CustomWebsites';
@@ -34,7 +33,6 @@ export default function App() {
       <main>
         <Hero language={language} onContactClick={openContact} />
         <Features language={language} />
-        <MenuDemo language={language} />
         <TableMaps language={language} />
         <Atmosphere language={language} />
         <CustomWebsites language={language} />

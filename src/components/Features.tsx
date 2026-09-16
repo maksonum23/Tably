@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarCheck, Map, Sparkles } from 'lucide-react';
+import { CalendarCheck, Map, Monitor } from 'lucide-react';
 import { Language, translations } from '../translations';
 import { motion } from 'motion/react';
 
@@ -26,10 +26,10 @@ export function Features({ language }: FeaturesProps) {
       bg: 'bg-blue-50',
     },
     {
-      id: 'aiMenu',
-      icon: <Sparkles className="text-cyan-500" size={32} />,
-      title: t.aiMenu.title,
-      description: t.aiMenu.description,
+      id: 'websites',
+      icon: <Monitor className="text-cyan-500" size={32} />,
+      title: t.websites.title,
+      description: t.websites.description,
       bg: 'bg-cyan-50',
     }
   ];

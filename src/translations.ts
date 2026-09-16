@@ -9,7 +9,7 @@ export const translations = {
     },
     hero: {
       title: 'The Revolutionary Reservation System for Your Business',
-      subtitle: 'Custom approach to every client, interactive drag-and-drop table maps, and AI-powered tools.',
+      subtitle: 'Custom approach to every client, interactive drag-and-drop table maps, and custom premium websites built for conversions.',
       cta: 'Get Started',
       secondaryCta: 'Learn More',
     },
@@ -24,9 +24,9 @@ export const translations = {
         title: 'Custom Table Maps',
         description: 'Tailor-made digital floor plans reflecting your restaurant\'s unique layout and seating capacity.',
       },
-      aiMenu: {
-        title: 'AI-Powered Menus',
-        description: 'Easily update your online menu and generate tempting "Special of the Day" entries using intuitive AI tools.',
+      websites: {
+        title: 'Premium Custom Websites',
+        description: 'Bespoke web design tailored to your brand, optimized to drive direct commission-free reservations.',
       },
     },
     tableMaps: {
@@ -38,14 +38,6 @@ export const translations = {
     atmosphere: {
       title: 'Unforgettable Customer Experience',
       subtitle: 'Let them feel the unique atmosphere of your establishment right from the reservation stage.',
-    },
-    menuDemo: {
-      title: 'Change Your Menu in Seconds',
-      subtitle: 'Edit offerings, add seasonal items, and generate tempting descriptions using AI directly from your phone.',
-      badge: 'Special of the Day',
-      itemTitle: 'Grilled Salmon',
-      itemDesc: 'Fresh herb-crusted salmon served with asparagus and lemon butter sauce.',
-      btnEdit: 'Generate with AI',
     },
     customWeb: {
       title: '100% Custom Website Design',
@@ -86,7 +78,7 @@ export const translations = {
     faq: {
       title: 'Frequently Asked Questions',
       items: [
-        { q: 'How does the AI menu work?', a: 'Our AI tools help you quickly generate descriptions, translate items, and instantly add "Specials of the day" without technical skills.' },
+        { q: 'How does the custom website creation work?', a: 'Our team designs a unique, premium website specifically for your brand. It includes an integrated reservation system designed to maximize your direct bookings without any commission fees.' },
         { q: 'Is the table map customized for my restaurant?', a: 'Yes! We design the digital floor plan exactly according to your actual layout, ensuring perfect synchronization with your real-world seating.' },
         { q: 'Can I change the floor plan later?', a: 'Absolutely. You can easily adjust table positions, add temporary seating, or merge tables for larger groups.' }
       ]
@@ -114,7 +106,7 @@ export const translations = {
     },
     hero: {
       title: 'Revoluční rezervační systém pro váš byznys',
-      subtitle: 'S osobním přístupem ke každému klientovi, interaktivní mapou stolů s drag & drop a nástroji s umělou inteligencí.',
+      subtitle: 'S osobním přístupem ke každému klientovi, interaktivní mapou stolů s drag & drop a na míru tvořenými weby maximalizující konverze.',
       cta: 'Začít',
       secondaryCta: 'Zjistit více',
     },
@@ -129,9 +121,9 @@ export const translations = {
         title: 'Vlastní mapy stolů',
         description: 'Digitální plány na míru, které odrážejí jedinečné uspořádání a kapacitu vaší restaurace.',
       },
-      aiMenu: {
-        title: 'Menu s umělou inteligencí',
-        description: 'Snadno aktualizujte online menu a vytvářejte lákavé "Speciality dne" pomocí AI nástrojů.',
+      websites: {
+        title: 'Prémiové weby na míru',
+        description: 'Unikátní webový design na míru vaší značce, optimalizovaný pro přímé rezervace bez provizí.',
       },
     },
     tableMaps: {
@@ -143,14 +135,6 @@ export const translations = {
     atmosphere: {
       title: 'Nezapomenutelná zákaznická zkušenost',
       subtitle: 'Dejte hostům pocítit jedinečnou atmosféru vašeho podniku už ve fázi rezervace.',
-    },
-    menuDemo: {
-      title: 'Měňte své menu během vteřin',
-      subtitle: 'Upravujte nabídku, přidávejte sezónní položky a generujte lákavé popisy pomocí umělé inteligence přímo z vašeho telefonu.',
-      badge: 'Specialita dne',
-      itemTitle: 'Grilovaný losos',
-      itemDesc: 'Čerstvý losos s bylinkovou krustou, podávaný s chřestem a citronovou omáčkou.',
-      btnEdit: 'Generovat pomocí AI',
     },
     customWeb: {
       title: '100% Individuální webové stránky',
@@ -191,7 +175,7 @@ export const translations = {
     faq: {
       title: 'Často kladené dotazy',
       items: [
-        { q: 'Jak funguje AI menu?', a: 'Naše AI nástroje vám pomohou rychle generovat popisy, překládat položky a okamžitě přidávat "Speciality dne" bez technických znalostí.' },
+        { q: 'Jak probíhá tvorba webu na míru?', a: 'Náš tým navrhne a nakóduje jedinečný prémiový web přesně pro vaši značku. Obsahuje integrovaný rezervační systém navržený tak, aby maximalizoval přímé rezervace bez jakýchkoliv poplatků nebo provizí.' },
         { q: 'Je mapa stolů přizpůsobena mé restauraci?', a: 'Ano! Digitální plán navrhneme přesně podle vašeho skutečného uspořádání pro dokonalou orientaci.' },
         { q: 'Mohu plán uspořádání později změnit?', a: 'Rozhodně. Můžete snadno upravovat pozice stolů, přidávat dočasná místa nebo spojovat stoly pro větší skupiny.' }
       ]
